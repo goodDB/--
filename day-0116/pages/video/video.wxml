@@ -1,12 +1,29 @@
-<view>
-  <view class="title">下面开始小姐姐的视频播放</view>
-  <video src="http://www.wantuju.com/upload/video/2020-07-13/18a8b212-81c5-46ba-ac1f-b81a69f9a423.mp4" 
-  enable-danmu
-  danmu-btn
-    id="myVideo"></video>
-  <view>
-    <input  placeholder="请输入弹幕" bindblur="inputBlur" />
-    <button bindtap="btnPush">发送</button>
+<view style="border:5px #ccc solid;background-color:green;font-size:23px;border-radius:20px;">
+  <view style="text-align:center;">下面开始小姐姐的视频播放</view>
+  <video src="http://www.wantuju.com/upload/video/2020-07-13/18a8b212-81c5-46ba-ac1f-b81a69f9a423.mp4" enable-danmu
+    danmu-btn bindtimeupdate="timeUpdate" style="width:100%" id="myVideo"></video>
+
+  <view style="display:flex;">
+    <input placeholder="请输入弹幕" bindblur="inputBlur"
+      style="border:2px #fff solid;color:black;font-size:16px;height:35px;margin-left:5px;border-radius:5px;flex-grow:1;" />
+    <button bindtap="btnPush" style="width:30%;background-color:aqua;margin-left:0px;">发送</button>
   </view>
 
+
+</view>
+
+<!-- 弹幕列表 -->
+<view style="display:flex;border:#ccc 5px solid;background-color:#4cdb20">
+  <view style="border:#000000 3px solid;">
+    <view>发送弹幕的时间</view>
+    <view wx:for="{{timeList}}" style="border:1px #000 solid">
+      {{item}}
+    </view>
+  </view>
+  <view style="border:#000000 3px solid;flex-grow:1;">
+    <view>您输入的内容</view>
+    <view wx:for="{{danmuValueList}}" style="border:1px #000 solid">
+      {{item}}
+    </view>
+  </view>
 </view>

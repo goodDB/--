@@ -14,28 +14,44 @@ Page({
    * 页面的初始数据
    */
   data: {
-    danmuValue:''
+    danmuValue: '',
+    danmuValueList: [],
+    danmuValueTime: [],
+    time: "",
+    timeList: []
   },
-  inputBlur(e){
-    console.log(e.detail.value);
+  inputBlur(e) {
+    if (!e.detail.value) { e.detail.value = null }
     this.setData({
       danmuValue: e.detail.value
     })
   },
-  btnPush(){
+  btnPush() {
+
+    var list = this.data.danmuValueList
+    var times = this.data.timeList
+    if (this.data.time)
+      times.push(this.data.time)
+    else
+      times.push("0.00")
+    list.push(this.data.danmuValue)
+    this.setData({ danmuValueList: list, timeList: times })
     this.videoContext.sendDanmu({
       text: this.data.danmuValue,
       color: getRandomColor()
     })
   },
+  timeUpdate: function (e) {
+    this.data.time = e.detail.currentTime
+    // return e.detail.currentTime
+
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options.id);
-    var color = ""
-    console.log( color = color.length === 1 ? '0' + color : color);
-    console.log( color );
+    // console.log(options.id);
+
   },
 
   /**
