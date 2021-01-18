@@ -1,0 +1,12 @@
+<view>
+  <view class="title">下面开始小姐姐的视频播放</view>
+  <video src="http://www.wantuju.com/upload/video/2020-07-13/18a8b212-81c5-46ba-ac1f-b81a69f9a423.mp4" 
+  enable-danmu
+  danmu-btn
+    id="myVideo"></video>
+  <view>
+    <input  placeholder="请输入弹幕" bindblur="inputBlur" />
+    <button bindtap="btnPush">发送</button>
+  </view>
+
+</view>

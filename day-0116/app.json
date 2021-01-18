@@ -1,0 +1,17 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/videos/videos",
+    "pages/video/video"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#005555",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "深夜治疗",
+    "backgroundColor": "#222222",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": false
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

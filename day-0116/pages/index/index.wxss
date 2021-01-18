@@ -1,0 +1,44 @@
+.all{
+  background-color: #92da63;
+}
+.top{
+  display: flex;
+  flex-direction: row;
+  /* height: 300rpx; */
+  flex-grow: 1;
+}
+.topLeft{
+  width: 45%;
+  margin: 2%;
+}
+.topRight{
+  width: 50%;
+  flex-grow: 1;
+  margin: 2%;
+  font-size: 12px;
+  text-align: center;
+}
+.rightTop{
+  width: 100%;
+  height: 120px;
+}
+.rightBottom{
+  width: 100%;
+  height: 120px;
+  background-color: green;
+}
+/* 图片都要设置宽高，不然图片会自适应宽高，容易越界 */
+.bottomImg{
+  border: 2px solid #000000;
+  color: blue;
+}
+.bottom{
+  width: 85%;
+  margin: auto;
+  text-align: center;
+  background-color: yellow;
+}
+.list{
+  display: flex;
+  flex-direction: row;
+}

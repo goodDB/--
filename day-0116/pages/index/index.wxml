@@ -1,0 +1,45 @@
+<view class="all">
+  <!-- 上半 -->
+  <view style="border:5px solid #000000;margin:0px 5px;background-color:#141111;">
+    <view style="text-align:center;color:blue;font-size:20px">小姐姐图片</view>
+    <view class="top">
+      <!-- 左边 -->
+      <image src="https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2106474246,1283617636&fm=26&gp=0.jpg"
+        class="topLeft" id="0" bindtap="topTap"></image>
+      <!-- 右边 -->
+      <view class="topRight">
+        <image class="rightTop"
+          src="https://dss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1432641894,2426826391&fm=26&gp=0.jpg" id="1"
+          bindtap="topTap"></image>
+        <image class="rightBottom"
+          src="https://dss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2106474246,1283617636&fm=26&gp=0.jpg" id="2"
+          bindtap="topTap"></image>
+      </view>
+    </view>
+  </view>
+
+  <!-- 下半 -->
+  <view class="bottom">
+    <view wx:for="{{images}}" wx:key="btns" style="margin-top:10px;">
+      <view class="bottomImg" wx:key="btn{{index}}" bindtap="bottomTap" id="{{index}}">
+        <view>{{item.name}}</view>
+        <image src="{{item.img}}" style="width:100%;hight:100%;"></image>
+      </view>
+    </view>
+  </view>
+
+  <!-- 瀑布流 -->
+  <view class="list">
+    <!-- 核心：把瀑布分为两列 -->
+    <!-- <view class="listLeft" wx:for="{{images}}"  > -->
+        <image wx:for="{{images}}" src="{{item.img}}"></image>
+        <!-- <view >{{item.name}}</view> -->
+    <!-- </view> -->
+
+    <!-- <view class="listRight" wx:for="{{images2}}" > -->
+      <!-- <image src="{{item.img}}">></image> -->
+      <!-- <view >{{item.name}}</view> -->
+    <!-- </view> -->
+
+  </view>
+</view>
