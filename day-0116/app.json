@@ -1,8 +1,8 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/videos/videos",
-    "pages/video/video"
+    "pages/video/video",
+    "pages/waterFallView/waterFallView"
   ],
   "window": {
     "navigationBarBackgroundColor": "#005555",
@@ -11,6 +11,18 @@
     "backgroundColor": "#222222",
     "backgroundTextStyle": "light",
     "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "list": [
+      {
+      "pagePath": "pages/index/index",
+      "text": "首页"
+    },
+      {
+      "pagePath": "pages/waterFallView/waterFallView",
+      "text": "导航大全"
+    }
+  ]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

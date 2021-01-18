@@ -28,18 +28,4 @@
     </view>
   </view>
 
-  <!-- 瀑布流 -->
-  <view class="list">
-    <!-- 核心：把瀑布分为两列 -->
-    <!-- <view class="listLeft" wx:for="{{images}}"  > -->
-        <image wx:for="{{images}}" src="{{item.img}}"></image>
-        <!-- <view >{{item.name}}</view> -->
-    <!-- </view> -->
-
-    <!-- <view class="listRight" wx:for="{{images2}}" > -->
-      <!-- <image src="{{item.img}}">></image> -->
-      <!-- <view >{{item.name}}</view> -->
-    <!-- </view> -->
-
-  </view>
 </view>

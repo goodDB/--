@@ -1,0 +1,19 @@
+  <!-- 瀑布流 -->
+  <h2 style="font-size:30px;color:green;witdh:100%;">展示瀑布流</h2>
+  <view class="list">
+    <!-- 核心：把瀑布分为两列 -->
+    <view style="width:50%">
+      <view class="listView" wx:for="{{images}}"   >
+          <image  src="{{item.img}}"  mode="widthFix"></image>
+          <view class="text">{{item.name}}</view>
+      </view>      
+    </view>
+
+    <view style="width:50%">
+      <view class="listView" wx:for="{{images2}}" > 
+        <image src="{{item.img}}" mode="widthFix"></image>
+        <view class="text">{{item.name}}</view>
+      </view>      
+    </view>
+
+  </view>

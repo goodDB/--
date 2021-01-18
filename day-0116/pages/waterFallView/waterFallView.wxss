@@ -1,0 +1,19 @@
+.list{
+  display: flex;
+  flex-direction: row;
+}
+.listView{
+  width: 90%;
+  border: rgb(168, 168, 168) 2px solid;
+  border-radius: 20%;
+  margin: auto;
+  background-color: tomato;
+}
+.listView image{
+  width: 100%;
+  margin: auto;
+  border-radius: 5px;
+}
+.text{
+  text-align: center;
+}
