@@ -1,5 +1,7 @@
 {
   "pages": [
+    "pages/0119/0119",
+    "pages/test/test",
     "pages/index/index",
     "pages/video/video",
     "pages/waterFallView/waterFallView"
@@ -15,14 +17,14 @@
   "tabBar": {
     "list": [
       {
-      "pagePath": "pages/index/index",
-      "text": "首页"
-    },
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
       {
-      "pagePath": "pages/waterFallView/waterFallView",
-      "text": "导航大全"
-    }
-  ]
+        "pagePath": "pages/waterFallView/waterFallView",
+        "text": "导航大全"
+      }
+    ]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

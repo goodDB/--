@@ -1,0 +1,149 @@
+<!--pages/0119/0119.wxml-->
+<!-- 总的 -->
+
+<view style="background-color:#cccccc;height:{{height+'px'}};">
+
+  <!-- 第一块 -->
+  <view class="hr"></view>
+  <view class="views" style="height:{{height1}};width:{{width1}}">
+    <view style="font-size:15px;margin-top:10px">题目内容(单选题)</view>
+    <view style="font-size:14px;color:#333333;margin-top:10px">这是题目的内容这是题目的内容，9张图片</view>
+    <!-- 图片区域划分 -->
+    <view class="img">
+
+      <view style="  display: flex;flex-direction: row;margin-top:5px">
+        <view wx:for="{{list00}}" style="margin: 0px 10px 0px 10px" >
+          <image src="{{item.img}}"
+          style="width: 85px;height:85px;border-radius: 2px;border:1px solid #F4F6FA; position: relative; float: left;" bindtap="btnImg0" id="img0{{index}}"></image>
+          <image src="../../images/4.png" style="height:19px;width:19px; margin-top:-4px;margin-left:-15px; position: relative; float: left;" id="img00{{index}}" bindtap="btnIcon0"></image>
+        </view>
+      </view>
+
+      <view style="  display: flex;flex-direction: row;margin-top:5px">
+        <view wx:for="{{list01}}" style="margin: 0px 10px 0px 10px">
+          <image src="{{item.img}}"
+          style="width: 85px;height:85px;border-radius: 2px;border:1px solid #F4F6FA; position: relative; float: left;" id="img1{{index}}" bindtap="btnImg0"></image>
+          <image src="../../images/4.png" style="height:19px;width:19px; margin-top:-4px;margin-left:-15px; position: relative; float: left;" id="img01{{index}}" bindtap="btnIcon0"></image>
+        </view>
+      </view>
+      <view style="  display: flex;flex-direction: row;margin-top:5px">
+        <view wx:for="{{list02}}" style="margin: 0px 10px 0px 10px">
+          <image src="{{item.img}}"
+          style="width: 85px;height:85px;border-radius: 2px;border:1px solid #F4F6FA; position: relative; float: left;" id="img2{{index}}" bindtap="btnImg0"></image>
+          <image src="../../images/4.png" style="height:19px;width:19px; margin-top:-4px;margin-left:-15px; position: relative; float: left;" id="img02{{index}}" bindtap="btnIcon0"></image>
+        </view>
+      </view>
+
+
+
+      <image src="../../images/2.png"
+        style="width: 85px;height:85px;border-radius: 2px;border:1px solid #F4F6FA;margin:0px 8px;margin-top:15px;" bindtap="addList00">
+      </image>
+    </view>
+    <text>19/3000</text>
+  </view>
+
+  <!-- 第二块 -->
+  <view class="hr"></view>
+  <view class="views1" style="height:{{height2 + 'px'}};width:{{width3}}">
+    <view style="margin:5px;font-size:15px">选项</view>
+    <view style="margin-top:15px;"></view>
+    <view style="margin:auto;">
+
+      <view class="span" wx:if="{{A}}">
+        <view class="iconText">A</view>
+        <view class="inputIcon">
+          <view class="inputView">
+            <input type="text"
+              style="width: 254px;height: 46px;border: 1px solid #E0E0E0;margin:auto;border:#ffffff solid 1px;margin-left:10px"
+              placeholder="  输入这个选项，一张图片" />
+            <image src="../../images/1.png" class="inpIcon"></image>
+          </view>
+        </view>
+        <image src="../../images/3.png" class="imgIcon" bindtap="delBtn" id="0"></image>
+      </view>
+
+      <view class="span" wx:if="{{B}}">
+        <view class="iconText">B</view>
+        <view class="inputIcon">
+          <view class="inputView">
+            <input type="text" style="width: 254px;height: 46px;background: #FBFBFB;margin:auto;margin-left:10px"
+              placeholder="  这是内容" />
+            <image src="../../images/1.png" class="inpIcon"></image>
+          </view>
+        </view>
+        <image src="../../images/3.png" class="imgIcon" bindtap="delBtn" id="1"></image>
+      </view>
+
+      <view class="span" wx:if="{{C}}">
+        <view class="iconText">C</view>
+        <view class="inputIcon">
+          <view class="inputView">
+            <textarea type="text"
+              style="width: 254px;height: 68px;font-size: 15px;font-family: PingFangSC-Regular, PingFang SC;font-weight: 400;color: #333333;line-height: 23px;margin-right:19px;margin-left:10px;margin-top:10px;"
+              placeholder="输入这个选项，有很多文字可以回行输入这个选项，有很多字可">
+            </textarea>
+            <image src="../../images/1.png" class="inpIcon"></image>
+          </view>
+        </view>
+        <image src="../../images/3.png" class="imgIcon" bindtap="delBtn" id="2"></image>
+      </view>
+    </view>
+
+    <view class="span" wx:if="{{D}}">
+      <view class="iconText">D</view>
+      <view class="inputIcon">
+        <view class="inputView">
+          <input type="text" style="width: 254px;height: 46px;background: #FBFBFB;margin:auto;margin-left:10px"
+            placeholder="  内容" />
+          <image src="../../images/1.png" class="inpIcon"></image>
+        </view>
+      </view>
+      <image src="../../images/3.png" class="imgIcon" bindtap="delBtn" id="3"></image>
+    </view>
+
+    <view style="display:flex;flex-direction:row;margin-left:60px;margin-top:20px">
+      <image src="../../images/5.png" style="height:18px;width:18px;"></image>
+      <view style="width:56px;height: 14px;font-size: 14px;color: #15C19B;line-height: 14px;margin-left:10px">添加样式</view>
+    </view>
+  </view>
+
+  <!-- 第三块 -->
+  <view class="hr"></view>
+  <view class="views" style="height:{{height3 + 'px'}};width:{{width3}}">
+    <view style="font-size:15px;margin-top:10px">题目解析(选填)</view>
+    <view style="font-size:14px;color:#333333;margin-top:15px">这是题目的解析这是题目的解析，9张图片</view>
+    <!-- 图片区域划分 -->
+    <view class="img">
+
+      <view style="  display: flex;flex-direction: row;margin-top:5px">
+        <view wx:for="{{list00}}" style="margin: 0px 10px 0px 10px" >
+          <image src="{{item.img}}"
+          style="width: 85px;height:85px;border-radius: 2px;border:1px solid #F4F6FA; position: relative; float: left;" bindtap="btnImg0" id="img0{{index}}"></image>
+          <image src="../../images/4.png" style="height:19px;width:19px; margin-top:-4px;margin-left:-15px; position: relative; float: left;" id="img00{{index}}" bindtap="btnIcon0"></image>
+        </view>
+      </view>
+
+      <view style="  display: flex;flex-direction: row;margin-top:5px">
+        <view wx:for="{{list01}}" style="margin: 0px 10px 0px 10px">
+          <image src="{{item.img}}"
+          style="width: 85px;height:85px;border-radius: 2px;border:1px solid #F4F6FA; position: relative; float: left;" id="img1{{index}}" bindtap="btnImg0"></image>
+          <image src="../../images/4.png" style="height:19px;width:19px; margin-top:-4px;margin-left:-15px; position: relative; float: left;" id="img01{{index}}" bindtap="btnIcon0"></image>
+        </view>
+      </view>
+      <view style="  display: flex;flex-direction: row;margin-top:5px">
+        <view wx:for="{{list02}}" style="margin: 0px 10px 0px 10px">
+          <image src="{{item.img}}"
+          style="width: 85px;height:85px;border-radius: 2px;border:1px solid #F4F6FA; position: relative; float: left;" id="img2{{index}}" bindtap="btnImg0"></image>
+          <image src="../../images/4.png" style="height:19px;width:19px; margin-top:-4px;margin-left:-15px; position: relative; float: left;" id="img02{{index}}" bindtap="btnIcon0"></image>
+        </view>
+      </view>
+
+
+      <image src="../../images/2.png"
+        style="width: 85px;height:85px;border-radius: 2px;border:1px solid #F4F6FA;margin:0px 8px;margin-top:15px;">
+      </image>
+    </view>
+    <text>19/3000</text>
+  </view>
+</view>

@@ -9,6 +9,10 @@
     <button bindtap="btnPush" style="width:30%;background-color:aqua;margin-left:0px;">发送</button>
   </view>
 
+  <camera  style="width: 100%; height: 300px;" frame-size="large"></camera>
+<button type="primary" bindtap="takePhoto">拍照</button>
+<view>预览</view>
+<image mode="widthFix" src="{{src}}"></image>
 
 </view>
 
