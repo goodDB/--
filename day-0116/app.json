@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/0119/0119",
+    "pages/text/text",
     "pages/test/test",
     "pages/index/index",
     "pages/video/video",

@@ -1,0 +1,31 @@
+/* pages/text/text.wxss */
+@keyframes move {
+
+  from {
+    margin-left: 100%;
+  }
+
+  to {
+    margin-left: var(--width);
+    /* var接受传入的变量 */
+  }
+
+}
+
+.marquee_text {
+
+  display: inline-block;
+
+  margin-left: 100%;
+
+  white-space: nowrap;
+
+  animation: move var(--timer) infinite linear;
+
+  font-weight: bold;
+  background: url('https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2025728819,3580500436&fm=26&gp=0.jpg');
+  background-size: contain;
+  -webkit-background-clip: text;
+  color: transparent;
+
+}

@@ -16,8 +16,8 @@
   margin-top: 85px;
 }
 text{
-  width: 47px;
-  height: 12px;
+  /* width: 47px;
+  height: 12px; */
   font-size: 12px;
   font-family: PingFangSC-Medium, PingFang SC;
   font-weight: 500;
@@ -25,6 +25,11 @@ text{
   line-height: 12px;
   margin-left: 280px;
   text-align: center;
+  width: 254px;
+  height: 46px;
+  background: #FBFBFB;
+  margin-right:10px;
+
 }
 .views1{
 margin: auto;

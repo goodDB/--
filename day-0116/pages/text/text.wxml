@@ -1,0 +1,7 @@
+<!--pages/text/text.wxml-->
+
+<view  style="--width:{{width}}px;--timer:{{timer}}s;">
+
+<view class="marquee_text" style="font-size:{{size}}px">{{text}}</view>
+
+</view>
