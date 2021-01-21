@@ -201,6 +201,8 @@ Page({
   btnIcon0(e){
     var x =  e.currentTarget.id.charAt(4)
     var y =  e.currentTarget.id.charAt(5)
+    console.log(x);
+    console.log(y);
     console.log(x==="0");
     if(x === "0"){
       this.data.list00.splice(y,1)
@@ -212,7 +214,7 @@ Page({
           this.setData({list01:[]})
         }
         else{
-          this.data.list01.splice(1,1)
+          this.data.list01.splice(0,1)
           this.setData({list01:this.data.list01})
         }
 
@@ -225,7 +227,7 @@ Page({
             this.setData({list02:[]})
           }
           else
-           this.data.list02.splice(1,1)
+           this.data.list02.splice(0,1)
            this.setData({list02:this.data.list02})
         }
         // 当长度为0的时候应该缩小块高度，页面高度
@@ -249,7 +251,7 @@ Page({
           this.setData({list02:[]})
         }
         else
-         this.data.list02.splice(1,1)
+         this.data.list02.splice(0,1)
          this.setData({list02:this.data.list02})
         // 当长度为0的时候应该缩小块高度，页面高度
         if(this.data.list02.length === 0){
@@ -266,7 +268,7 @@ Page({
         this.setData({list02:[]})
       }
       else
-       this.data.list02.splice(1,1)   
+       this.data.list02.splice(0,1)   
        this.setData({list02:this.data.list02})   
        // 当长度为0的时候应该缩小块高度，页面高度
       if(this.data.list02.length === 0){
@@ -282,6 +284,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+
     this.setData({
       list00:this.data.list
     })
